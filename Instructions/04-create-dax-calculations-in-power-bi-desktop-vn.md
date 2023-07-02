@@ -383,13 +383,13 @@ Trong nhiệm vụ này, bạn sẽ tạo các biện pháp đơn giản. Các b
 
 	![Picture 36](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image41.png)
 
-14. In Report view, in the **Values** well/area of the matrix visual, for the **Unit Price** field, select **X** to remove it.
+14. Trong chế độ xem Báo cáo, trong ô/khu vực **Values** của hình ảnh ma trận, đối với trường **Unit Price**, hãy chọn **X** để xóa.
 
 	![Picture 38](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image42.png)
 
-15. Increase the size of the matrix visual to fill the page width and height.
+15. Tăng kích thước của hình ảnh ma trận để lấp đầy chiều rộng và chiều cao của trang.
 
-16. Add the following five measures to the matrix visual:
+16. Thêm năm thước đo sau vào hình ảnh ma trận:
 
 	- Median Price
 	- Min Price
@@ -397,28 +397,28 @@ Trong nhiệm vụ này, bạn sẽ tạo các biện pháp đơn giản. Các b
 	- Orders
 	- Order Lines
 
-17. Verify that the results look sensible and are correctly formatted.
+17. Xác minh rằng các kết quả trông hợp lý và được định dạng chính xác.
 
 	![Picture 39](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image43.png)
 
 ## **Create additional measures**
 
-In this task, you'll create more measures that use more complex formulas.
+Trong nhiệm vụ này, bạn sẽ tạo nhiều thước đo hơn sử dụng các công thức phức tạp hơn.
 
-1. In Report view, select **Page 1** and review the table visual, noticing the total for the **Target** column.
+1. Trong chế độ xem Báo cáo, hãy chọn **Page 1** và xem lại bảng trực quan, lưu ý tổng số cho cột **Target**.
 
 	![Picture 41](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image45.png)
 
 
-1. Select the table visual, and then in the **Visualizations** pane, remove the **Target** field.
+1. Chọn hình ảnh bảng, sau đó trong ngăn **Visualizations**, hãy xóa trường **Target**.
 
-1. Rename the **Targets \| Target** column as **Targets \| TargetAmount**.
+1. Đổi tên **Targets \| Target** thành **Targets \| TargetAmount**.
 
-	*Tip: There are several ways to rename the column in Report view: In the **Data** pane, you can right-click the column, and then select **Rename**—or, double-click the column, or press **F2**.*
+	*Mẹo: Có một số cách để đổi tên cột trong chế độ xem Báo cáo: Trong ngăn **Dữ liệu**, bạn có thể bấm chuột phải vào cột rồi chọn **Rename**—hoặc bấm đúp vào cột hoặc nhấn **F2**.*
 
-	*You’re about to create a measure named **Target**. It’s not possible to have a column and measure in the same table with the same name.*
+	*Bạn sắp tạo thước đo có tên **Target**. Không thể có một cột và thước đo trong cùng một bảng có cùng tên.*
 
-1. Create the following measure on the **Targets** table:
+1. Tạo *measure* sau trên bảng **Targets**:
 
 	**DAX**
 
@@ -435,51 +435,59 @@ In this task, you'll create more measures that use more complex formulas.
 	)
 	```
 
-	*The HASONEVALUE() function tests whether a single value in the **Salesperson** column is filtered. When true, the expression returns the sum of target amounts (for just that salesperson). When false, BLANK is returned.*
+	*Hàm HASONEVALUE() kiểm tra xem một giá trị trong cột *Salesperson** có được lọc hay không. Khi đúng, biểu thức trả về tổng số tiền mục tiêu (chỉ cho nhân viên bán hàng đó). Khi sai, BLANK được trả về.*
 
-1. Format the **Target** measure for zero decimal places.
+1. Định dạng phép đo **Target** cho số thập phân bằng 0.
+	*Mẹo: Bạn có thể sử dụng dải băng theo ngữ cảnh **Measure Tools**.*
 
-	*Tip: You can use the **Measure Tools** contextual ribbon.*
+1. Ẩn cột **TargetAmount**.
 
-1. Hide the **TargetAmount** column.
+	*Mẹo: Bạn có thể bấm chuột phải vào cột trong ngăn **Data** rồi chọn **Hide**.*
 
-	*Tip: You can right-click the column in the **Data** pane, and then select **Hide**.*
+1. Thêm thước đo **Target** vào hình ảnh bảng.
 
-1. Add the **Target** measure to the table visual.
-
-1. Notice that the **Target** column total is now BLANK.
+1. Lưu ý rằng tổng số cột **Target** hiện là BLANK.
 
 	![Picture 43](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image47.png)
 
-1. Use the snippets file definitions to create the following two measures for the **Targets** table:
+1. Sử dụng định nghĩa tệp đoạn trích để tạo hai thước đo sau cho bảng **Targets**:
 
 	- Variance
 	- Variance Margin
 
-1. Format the **Variance** measure for zero decimal places.
+	- Variance = 
+	IF(
+		HASONEVALUE('Salesperson (Performance)'[Salesperson]),
+		SUM(Sales[Sales]) - [Target]
+	)
 
-1. Format the **Variance Margin** measure as percentage with two decimal places.
+	- Variance Margin = 
+	DIVIDE([Variance], [Target])
 
-1. Add the **Variance** and **Variance Margin** measures to the table visual.
+1. Định dạng thước đo **Variance** cho số thập phân bằng 0.
 
-1. Resize the table visual so all columns and rows can be seen.
+1. Định dạng phép đo **Variance Margin** theo tỷ lệ phần trăm với hai chữ số thập phân.
+
+1. Thêm các thước đo **Variance** và **Variance Margin** vào hình ảnh bảng.
+
+1. Thay đổi kích thước trực quan của bảng để có thể nhìn thấy tất cả các cột và hàng.
 
 	![Picture 44](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image48.png)
 
-	*While it appears all salespeople aren't meeting target, remember that the table visual isn’t yet filtered by a specific time period. You’ll produce sales performance reports that filter by a user-selected time period in the **Design a Report in Power BI Desktop** lab.*
+	*Mặc dù có vẻ như tất cả nhân viên bán hàng đều không đạt được mục tiêu, nhưng hãy nhớ rằng hình ảnh bảng chưa được lọc theo một khoảng thời gian cụ thể. Bạn sẽ tạo báo cáo hiệu suất bán hàng lọc theo khoảng thời gian do người dùng chọn trong phòng thí nghiệm **Design a Report in Power BI Desktop**.*
 
-1. At the top-right corner of the **Data** pane, collapse and then expand open the pane.
+1. Ở góc trên cùng bên phải của ngăn **Data**, hãy thu gọn rồi mở rộng để mở ngăn.
 
-	*Collapsing and reopening the pane resets the content.*
+	*Thu gọn và mở lại ngăn sẽ đặt lại nội dung.
 
-1. Notice that the **Targets** table now appears at the top of the list.
+1. Lưu ý rằng bảng **Targets** hiện xuất hiện ở đầu danh sách.
 
 	![Picture 46](Linked_image_Files/05-create-dax-calculations-in-power-bi-desktop_image50.png)
 
-	*Tables that comprise only visible measures are automatically listed at the top of the list.*
+	*Các bảng chỉ bao gồm các số đo nhìn thấy được sẽ tự động được liệt kê ở đầu danh sách.*
 
 ### **Finish up**
 
 Save the Power BI Desktop file.
 
-*You’ll enhance the data model with more advanced calculations using DAX in the **Create Advanced DAX Calculations in Power BI Desktop** lab.*
+*Bạn sẽ nâng cao mô hình dữ liệu bằng các tính toán nâng cao hơn bằng cách sử dụng DAX trong phòng thí nghiệm **Create Advanced DAX Calculations in Power BI Desktopp**.*
