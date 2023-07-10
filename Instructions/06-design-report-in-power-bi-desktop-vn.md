@@ -216,30 +216,42 @@ Mở rộng nhóm **Bars** và sau đó là nhóm **Colors**, sau đó đặt th
 ## **Design page 2**
 
 In this task, you'll design the second report page. When you’ve completed the design, the page will look like the following:
+(Trong nhiệm vụ này, bạn sẽ thiết kế trang báo cáo thứ hai. Khi bạn đã hoàn thành thiết kế, trang sẽ trông giống như sau:)
 
  ![Image of page 2, comprising a slicer and matrix.](Linked_image_Files/07-design-report-in-power-bi-desktop_image37.png)
 
 *Important: When detailed instructions have already been provided in the labs, the lab steps will provide more concise instructions. If you need the detailed instructions, you can refer back to other tasks in this lab.*
 
+*Quan trọng: Khi hướng dẫn chi tiết đã được cung cấp trong phòng thí nghiệm, các bước trong phòng thí nghiệm sẽ cung cấp hướng dẫn ngắn gọn hơn. Nếu cần hướng dẫn chi tiết, bạn có thể tham khảo lại các nhiệm vụ khác trong phòng thí nghiệm này.*
+
 1. To create a new page, at the bottom-left, select the plus icon, and rename new page to **Profit**.
+(Để tạo một trang mới, ở dưới cùng bên trái, hãy chọn biểu tượng dấu cộng và đổi tên trang mới thành **Profit**.)
 
 1. Add a slicer based on the **Region \| Region** field.
+(Thêm một slicer dựa trên **Region \| Region**.)
 
 1. Use the **Format** pane to enable the “Select All” option (in the **Selection** group).
+(Sử dụng ngăn **Format** để bật tùy chọn “Select All” (trong nhóm **Selection**).)
 
 1. Resize and position the slicer so it sits at the left side of the report page, and so it is about half the page height.
+
+(Thay đổi kích thước và định vị bộ cắt sao cho nó nằm ở phía bên trái của trang báo cáo và do đó, nó bằng khoảng một nửa chiều cao của trang.)
 
      ![Picture 44](Linked_image_Files/07-design-report-in-power-bi-desktop_image40.png)
 
 1. Add a matrix visual, and resize and position it so it fills the remaining space of the report page
 
+(Thêm một hình ảnh ma trận, thay đổi kích thước và định vị nó để nó lấp đầy không gian còn lại của trang báo cáo)
+
      ![Picture 45](Linked_image_Files/07-design-report-in-power-bi-desktop_image41.png)
 
 1. Add the **Date \| Fiscal** hierarchy to the matrix **Rows** well/area.
-
+(Thêm **Date \| Fiscal** cho ma trận **Rows** giếng/khu vực.)
+          
      ![Picture 46](Linked_image_Files/07-design-report-in-power-bi-desktop_image42.png)
 
 1. Add the following five **Sales** table fields to the **Values** well/area:
+(Thêm năm trường bảng **Sales** sau vào ô/khu vực **Values**:)
 
      - Orders (from the **Counts** folder)
      - Sales
@@ -250,16 +262,22 @@ In this task, you'll design the second report page. When you’ve completed the 
      ![Picture 55](Linked_image_Files/07-design-report-in-power-bi-desktop_image43.png)
 
 1. In the **Filters** pane (located at the left of the **Visualizations** pane), notice the **Filter On This Page** well/area (you may need to scroll down).
+(Trong khung **Filters** (nằm ở bên trái của khung **Visualizations**), hãy chú ý đến ô/khu vực **Filter On This Page** (bạn có thể cần phải cuộn xuống).)
 
      ![Picture 57](Linked_image_Files/07-design-report-in-power-bi-desktop_image44.png)
 
 1. From the **Data** pane, drag the **Product \| Category** field into the **Filter On This Page** well/area.
+(Từ ngăn **Data**, hãy kéo **Product \| Category** vào giếng/khu vực **Filter On This Page**.)
     
 	*Fields added to the **Filters** pane can achieve the same result as a slicer. One difference is they don’t take up space on the report page. Another difference is that they can be configured to achieve more sophisticated filtering requirements.*
 
+     *Các trường được thêm vào ngăn **Bộ lọc** có thể đạt được kết quả tương tự như một bộ cắt. Một điểm khác biệt là chúng không chiếm dung lượng trên trang báo cáo. Một điểm khác biệt nữa là chúng có thể được cấu hình để đạt được các yêu cầu lọc phức tạp hơn.*
+
 1. Inside the filter card, at the top-right, select the arrow to collapse the card.
+(Bên trong thẻ bộ lọc, ở trên cùng bên phải, hãy chọn mũi tên để thu gọn thẻ.)
 
 1. Add each of the following **Product** table fields to the **Filter On This Page** well/area, collapsing each, directly beneath the **Category** card:
+(Thêm từng trường bảng **Product** sau vào giếng/khu vực **Filter On This Page**, thu gọn từng trường, ngay bên dưới thẻ **Category**:)
 
      - Subcategory
      - Product
@@ -274,32 +292,40 @@ In this task, you'll design the second report page. When you’ve completed the 
 ## **Design page 3**
 
 In this task, you'll design the third—and final—report page. When you’ve completed the design, the page will look like the following:
+(Trong nhiệm vụ này, bạn sẽ thiết kế trang báo cáo thứ ba—và trang cuối cùng—. Khi bạn đã hoàn thành thiết kế, trang sẽ trông giống như sau:)
 
  ![Image of page 3, comprising a slicer and three visuals.](Linked_image_Files/07-design-report-in-power-bi-desktop_image47.png)
 
 1. Create a new page, and then rename it as **My Performance**.
+(Tạo 1 Page mới, và đặt tên như sau **My Performance**)
 
 1. To simulate the performance of row-level security filters, drag the **Salesperson (Performance) \| Salesperson** field to the page level filters in the filter pane.
+(Để mô phỏng hiệu suất của bộ lọc bảo mật cấp hàng, hãy kéo **Salesperson (Performance) \| Salesperson** vào bộ lọc cấp trang trong ngăn bộ lọc.)
 
      ![Image of Salesperson field in filter pane.](Linked_image_Files/07-design-report-in-power-bi-desktop_image999.png)
 
 1. Select **Michael Blythe**. Data on the **My Performance** report page will now be filtered to display data for Michael Blythe only.
+(Chọn **Michael Blythe**. Giờ đây, dữ liệu trên trang báo cáo **My Performance** sẽ được lọc để chỉ hiển thị dữ liệu cho Michael Blythe.)
 
 1. Add a dropdown slicer based on the **Date \| Year** field, and then resize and position it so it sits at the top-left corner of the page.
+(Thêm một trình cắt thả xuống dựa trên **Date \| Year**, sau đó thay đổi kích thước và định vị trường đó sao cho nằm ở góc trên cùng bên trái của trang.)
 
      ![Picture 70](Linked_image_Files/07-design-report-in-power-bi-desktop_image49.png)
 
 1. In the slicer, set the page to filter by **FY2019**.
+(Trong slicer, hãy đặt trang để lọc theo **FY2019**.)
 
      ![Picture 71](Linked_image_Files/07-design-report-in-power-bi-desktop_image50.png)
 
 1. Add a **Multi-row Card** visual, and then resize and reposition it so it sits to the right of the slicer and fills the remaining width of the page.
+(Thêm hình ảnh **Multi-row Card**, sau đó thay đổi kích thước và đặt lại vị trí sao cho nó nằm ở bên phải của bộ cắt và lấp đầy chiều rộng còn lại của trang.)
 
      ![Picture 56](Linked_image_Files/07-design-report-in-power-bi-desktop_image51.png)
 
      ![Picture 74](Linked_image_Files/07-design-report-in-power-bi-desktop_image52.png)
 
 1. Add the following four fields to the visual:
+(Thêm bốn trường sau vào hình ảnh:)
 
      - Sales \| Sales
      - Targets \| Target
@@ -307,14 +333,18 @@ In this task, you'll design the third—and final—report page. When you’ve c
      - Targets \| Variance Margin
 
 1. Format the visual:
+(Định dạng hình ảnh:)
 
      - In the **Callout values** group, increase the **Text Size** property to **28pt**
+     - Trong nhóm **Callout values**, hãy tăng thuộc tính **Text Size** thành **28pt**
 
      - In the **General > Effects > Background** group, set the **Color** to a light gray color (such as "White, 20% Darker) to give contrast
+     - Trong nhóm **General > Effects > Background**, đặt **Color** thành màu xám nhạt (chẳng hạn như "Trắng, Tối hơn 20%) để tạo độ tương phản
 
          ![Picture 79](Linked_image_Files/07-design-report-in-power-bi-desktop_image53.png)
 
 1. Add a **Clustered Bar Chart** visual, and then resize and position it so it sits beneath the multi-row card visual and fills the remaining height of the page, and half the width of the multi-row card visual.
+(Thêm hình ảnh **Clustered Bar Chart**, sau đó thay đổi kích thước và định vị sao cho nó nằm bên dưới hình ảnh thẻ nhiều hàng và lấp đầy chiều cao còn lại của trang cũng như bằng một nửa chiều rộng của hình ảnh thẻ nhiều hàng.)
 
      ![Picture 59](Linked_image_Files/07-design-report-in-power-bi-desktop_image54.png)
 
@@ -328,43 +358,56 @@ In this task, you'll design the third—and final—report page. When you’ve c
          ![Picture 80](Linked_image_Files/07-design-report-in-power-bi-desktop_image56.png)
 
 1. To create a copy of the visual, press **Ctrl+C**, and then press **Ctrl+V**.
+(Để tạo một bản sao của hình ảnh, nhấn **Ctrl+C**, sau đó nhấn **Ctrl+V**.)
 
 1. Position the new visual to the right of the original visual.
+Đặt hình ảnh mới ở bên phải của hình ảnh ban đầu.
 
      ![Picture 82](Linked_image_Files/07-design-report-in-power-bi-desktop_image57.png)
 
 1. To modify the visualization type, in the **Visualizations** pane, select **Clustered Column Chart**.
+Để sửa đổi kiểu trực quan hóa, trong ngăn **Visualizations**, hãy chọn **Clustered Column Chart**.
 
      ![Picture 61](Linked_image_Files/07-design-report-in-power-bi-desktop_image58.png)
 
  *It’s now possible to see the same data expressed by two different visualization types. This isn’t a good use of the page layout, however, you’ll improve it in the **Enhance a Report in Power BI Desktop** lab by superimposing the visuals. By adding buttons to the page, you’ll allow the report user to determine which of the two visuals is visible.*
 
+ *Giờ đây, có thể xem cùng một dữ liệu được thể hiện bằng hai loại trực quan hóa khác nhau. Đây không phải là cách sử dụng tốt bố cục trang, tuy nhiên, bạn sẽ cải thiện nó trong phòng thí nghiệm **Enhance a Report in Power BI Desktop** bằng cách xếp chồng các hình ảnh. Bằng cách thêm các nút vào trang, bạn sẽ cho phép người dùng báo cáo xác định hình ảnh nào trong số hai hình ảnh được hiển thị.*
+
  *The design of the third—and final—page is now complete.*
 
 ## **Publish the report**
-
 In this task, you'll publish the report to the Power BI service.
+Trong tác vụ này, bạn sẽ xuất bản báo cáo lên dịch vụ Power BI.
+https://www.youtube.com/watch?v=E0L1uXfefms
 
 1. Select the **Overview** page, then save the Power BI Desktop file.
+(Chọn trang **Overview**, sau đó lưu tệp Power BI Desktop.)
 
 1. On the **Home** ribbon tab, from inside the **Share** group, select **Publish**.
+(Trên tab dải băng **Home**, từ bên trong nhóm **Share**, hãy chọn **Publish**.)
     
 	*If you're not signed into Power BI Desktop already, you'll need to sign-in to publish.*
+     *Nếu bạn chưa đăng nhập vào Power BI Desktop, bạn sẽ cần đăng nhập để xuất bản.*
 
      ![Picture 67](Linked_image_Files/07-design-report-in-power-bi-desktop_image59.png)
 
 1. In the **Publish to Power** BI window, notice that **My Workspace** is selected.
+(Trong cửa sổ **Publish to Power** BI, lưu ý rằng **My Workspace** được chọn.)
     
 	*We won't go into detail about the different items within the Power BI service in this lab.*
 
 1. To publish the report, select **Select**. This may take a few moments. 
+(Để xuất bản báo cáo, hãy chọn **Select**. Điều này có thể mất một vài phút.)
 1. When the publication has succeeded, select **Got It**.
-
+(Khi xuất bản thành công, chọn **Got It**.)
 ## **Explore the report**
 
 In this task, you'll explore the report that was published to Power BI.
+Trong nhiệm vụ này, bạn sẽ khám phá báo cáo đã được xuất bản lên Power BI.
 
 1. Open a Microsoft Edge browser, then sign-in at **https://app.powerbi.com**.
+Mở trình duyệt Microsoft Edge, sau đó đăng nhập tại **https://app.powerbi.com**.
 
 1. In the Microsoft Edge browser window, in the Power BI service, in the **Navigation** pane (located at the left, and it could be collapsed), expand **My Workspace**.
 
