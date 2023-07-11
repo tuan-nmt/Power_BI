@@ -104,18 +104,23 @@ Trong trang **Overview**, hãy đặt bộ cắt **Year** thành **FY2020**.
     ![Picture 43](Linked_image_Files/09-create-power-bi-dashboard_image18.png)
 
 1. In the **Pin to Dashboard** window, in the **Dashboard Name** box, enter **Sales Monitoring**, then select **Pin**.
+Trong cửa sổ **Pin to Dashboard**, trong hộp **Dashboard Name**, hãy nhập **Sales Monitoring**, sau đó chọn **Pin**.
 
     ![Picture 3](Linked_image_Files/09-create-power-bi-dashboard_image19.png)
 
 1. Open **My Workspace** and open the **Sales Monitoring** dashboard.
+Mở **My Workspace** và mở bảng điều khiển **Sales Monitoring**.
 
 1. Notice that the dashboard has a single tile.
+Lưu ý rằng trang tổng quan có một ô duy nhất.
 
     ![Picture 45](Linked_image_Files/09-create-power-bi-dashboard_image22.png)
 
 1. To add a tile based on a question, at the top-left of the dashboard, select **Ask a Question About Your Data**.
+Để thêm một ô dựa trên câu hỏi, ở trên cùng bên trái của trang tổng quan, hãy chọn **Ask a Question About Your Data**.
     
 	*You can use the Q&A feature to ask a question, and Power BI will respond will a visual.*
+    *Bạn có thể sử dụng tính năng Hỏi & Đáp để đặt câu hỏi và Power BI sẽ trả lời bằng hình ảnh.*
 
     ![Picture 7](Linked_image_Files/09-create-power-bi-dashboard_image23.png)
 
